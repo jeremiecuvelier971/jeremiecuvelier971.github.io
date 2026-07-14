@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Missions BackOffices — Vous avez le client, nous composons le dossier</title>
+<meta name="description" content="Envoyez une demande client, recevez en 24/48h un dossier complet : concept, options prestataires, budget, marge, risques, message client. Pour wedding planners, conciergeries et agences événementielles." />
+<meta name="theme-color" content="#1F3A5F" />
+<link rel="canonical" href="https://missionsbackoffices.fr/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Missions BackOffices — Vous avez le client, nous composons le dossier" />
+<meta property="og:description" content="Envoyez une demande client, recevez en 24/48h un dossier complet, prêt à présenter. Le back-office des pros de l'événementiel." />
+<meta property="og:url" content="https://missionsbackoffices.fr/" />
+<meta property="og:locale" content="fr_FR" />
+
+<!-- Favicon : monogramme M doré sur marine -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F3A5F'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' fill='%23C9A227' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+/* =========================================================
+   MISSIONS BACKOFFICES — Landing premium (single-file)
+   ========================================================= */
+
+:root{
+  --marine:#1F3A5F;
+  --marine-900:#152a45;
+  --marine-950:#0f2038;
+  --teal:#2E7D6F;
+  --teal-600:#256a5e;
+  --gold:#C9A227;
+  --gold-soft:#e6c766;
+  --cream:#FBF8F2;
+  --cream-2:#F4EEE3;
+  --ink:#1a2430;
+  --ink-soft:#42505f;
+  --line:rgba(31,58,95,.12);
+  --white:#ffffff;
+
+  --shadow-sm:0 2px 8px rgba(21,42,69,.06);
+  --shadow-md:0 18px 45px -18px rgba(21,42,69,.28);
+  --shadow-lg:0 40px 90px -30px rgba(15,32,56,.45);
+
+  --radius:18px;
+  --radius-lg:26px;
+  --max:1180px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.6;
+  font-size:17px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+
+::selection{background:var(--gold);color:var(--marine-950)}
+
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:-.015em;color:var(--marine)}
+h1{font-size:clamp(2.6rem,6vw,4.6rem)}
+h2{font-size:clamp(2rem,4.2vw,3.3rem)}
+h3{font-size:clamp(1.3rem,2.4vw,1.7rem)}
+
+p{color:var(--ink-soft)}
+
+/* ---------- Layout helpers ---------- */
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:clamp(20px,5vw,40px)}
+.section{padding-block:clamp(72px,9vw,120px)}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:1.1rem;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold)}
+.lead{font-size:clamp(1.05rem,1.6vw,1.22rem);color:var(--ink-soft);max-width:56ch}
+.grad-text{
+  background:linear-gradient(105deg,var(--teal) 0%,var(--gold) 92%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.center{text-align:center}
+.center .lead{margin-inline:auto}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  font-weight:600;font-size:.98rem;letter-spacing:.01em;
+  padding:.95rem 1.6rem;border-radius:999px;
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .3s,color .3s;
+  will-change:transform;
+}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:var(--marine);color:var(--cream);box-shadow:var(--shadow-md)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 26px 50px -18px rgba(21,42,69,.5);background:var(--marine-900)}
+.btn-gold{background:linear-gradient(120deg,var(--gold) 0%,var(--gold-soft) 100%);color:var(--marine-950);box-shadow:0 18px 40px -16px rgba(201,162,39,.55)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 26px 55px -16px rgba(201,162,39,.7)}
+.btn-ghost{background:transparent;color:var(--marine);border:1.5px solid var(--line)}
+.btn-ghost:hover{transform:translateY(-3px);border-color:var(--marine);background:rgba(31,58,95,.04)}
+.btn-light{background:rgba(255,255,255,.1);color:var(--cream);border:1.5px solid rgba(255,255,255,.28);backdrop-filter:blur(6px)}
+.btn-light:hover{transform:translateY(-3px);background:rgba(255,255,255,.18)}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.header{
+  position:fixed;inset:0 0 auto 0;z-index:100;
+  transition:background .4s var(--ease),box-shadow .4s var(--ease),padding .4s var(--ease);
+  padding-block:18px;
+}
+.header.scrolled{
+  background:rgba(251,248,242,.82);
+  backdrop-filter:saturate(140%) blur(14px);
+  box-shadow:0 1px 0 var(--line),0 8px 30px -20px rgba(21,42,69,.35);
+  padding-block:10px;
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.brand{display:flex;align-items:center;gap:.7rem;font-family:var(--serif);font-weight:600;font-size:1.18rem;color:var(--marine);letter-spacing:-.01em}
+.brand .mono{
+  width:38px;height:38px;border-radius:11px;background:var(--marine);
+  display:grid;place-items:center;color:var(--gold);font-size:1.35rem;font-weight:600;
+  box-shadow:var(--shadow-sm);flex:none;
+}
+.brand small{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-top:-2px}
+.nav-links{display:flex;align-items:center;gap:2rem}
+.nav-links a{font-size:.92rem;font-weight:500;color:var(--ink-soft);transition:color .25s}
+.nav-links a:hover{color:var(--marine)}
+.nav-cta{display:flex;align-items:center;gap:.9rem}
+.nav .btn{padding:.68rem 1.25rem;font-size:.9rem}
+.burger{display:none;flex-direction:column;gap:5px;padding:8px}
+.burger span{width:24px;height:2px;background:var(--marine);border-radius:2px;transition:.3s}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{
+  position:relative;padding-top:clamp(140px,17vw,190px);padding-bottom:clamp(60px,8vw,100px);
+  background:
+    radial-gradient(1100px 600px at 82% -8%,rgba(46,125,111,.14),transparent 60%),
+    radial-gradient(900px 500px at 5% 20%,rgba(201,162,39,.10),transparent 55%),
+    var(--cream);
+  overflow:hidden;
+}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,4vw,4.5rem);align-items:center}
+.hero-pill{
+  display:inline-flex;align-items:center;gap:.6rem;
+  background:var(--white);border:1px solid var(--line);border-radius:999px;
+  padding:.5rem .95rem .5rem .6rem;font-size:.82rem;font-weight:600;color:var(--marine);
+  box-shadow:var(--shadow-sm);margin-bottom:1.6rem;
+}
+.hero-pill .dot{width:9px;height:9px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(46,125,111,.18)}
+.hero h1{margin-bottom:1.5rem}
+.hero h1 em{font-style:italic;font-weight:400}
+.hero .lead{margin-bottom:2.2rem;max-width:50ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+.hero-note{margin-top:1.5rem;font-size:.86rem;color:var(--ink-soft);display:flex;align-items:center;gap:.5rem}
+.hero-note svg{width:16px;height:16px;color:var(--teal);flex:none}
+
+/* Product mockup — aperçu du Dossier */
+.mockup{position:relative;perspective:1600px}
+.mockup-card{
+  position:relative;background:var(--white);border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg);border:1px solid rgba(255,255,255,.6);
+  padding:1.5rem 1.5rem 1.7rem;
+  transform:rotateY(-13deg) rotateX(7deg) rotate(1deg);
+  transition:transform .6s var(--ease);
+  animation:floatCard 7s ease-in-out infinite;
+}
+.mockup:hover .mockup-card{transform:rotateY(-4deg) rotateX(3deg)}
+@keyframes floatCard{0%,100%{translate:0 0}50%{translate:0 -14px}}
+.mk-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:1rem;border-bottom:1px solid var(--line);margin-bottom:1.1rem}
+.mk-title{font-family:var(--serif);font-size:1.05rem;color:var(--marine);font-weight:600}
+.mk-title span{display:block;font-family:var(--sans);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:600}
+.mk-badge{font-size:.68rem;font-weight:600;color:var(--teal);background:rgba(46,125,111,.1);padding:.3rem .6rem;border-radius:999px}
+.mk-row{display:flex;gap:.75rem;padding:.7rem 0;border-bottom:1px dashed var(--line);align-items:center}
+.mk-row:last-child{border-bottom:none}
+.mk-ico{width:34px;height:34px;border-radius:9px;flex:none;display:grid;place-items:center;color:var(--marine);background:var(--cream-2)}
+.mk-ico svg{width:17px;height:17px}
+.mk-txt b{display:block;font-family:var(--sans);font-size:.82rem;color:var(--ink);font-weight:600;line-height:1.3}
+.mk-txt small{font-size:.72rem;color:var(--ink-soft)}
+.mk-val{margin-left:auto;font-weight:700;font-size:.82rem;color:var(--marine);font-family:var(--sans)}
+.mk-val.teal{color:var(--teal)}
+.mk-foot{margin-top:1.1rem;padding-top:1rem;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.mk-foot small{font-size:.72rem;color:var(--ink-soft)}
+.mk-foot .chip{font-size:.72rem;font-weight:600;color:var(--marine);background:var(--cream-2);padding:.32rem .7rem;border-radius:999px}
+/* floating accents behind mockup */
+.mk-accent{position:absolute;border-radius:22px;z-index:-1}
+.mk-accent.a1{inset:auto -22px -26px auto;width:60%;height:60%;background:linear-gradient(135deg,var(--teal),transparent);opacity:.16;filter:blur(6px)}
+.mk-tag{
+  position:absolute;background:var(--white);border-radius:14px;box-shadow:var(--shadow-md);
+  padding:.7rem .9rem;display:flex;align-items:center;gap:.55rem;font-size:.8rem;font-weight:600;color:var(--marine);
+  animation:floatTag 5.5s ease-in-out infinite;
+}
+.mk-tag svg{width:16px;height:16px;color:var(--teal)}
+.mk-tag.t1{top:6%;left:-8%;animation-delay:.4s}
+.mk-tag.t2{bottom:8%;right:-6%;animation-delay:1.2s}
+@keyframes floatTag{0%,100%{translate:0 0}50%{translate:0 -12px}}
+
+/* =========================================================
+   MARQUEE / STATS
+   ========================================================= */
+.marquee{
+  background:var(--marine);color:var(--cream);overflow:hidden;padding-block:1.1rem;
+  border-block:1px solid rgba(255,255,255,.08);
+}
+.marquee-track{display:flex;gap:3.5rem;white-space:nowrap;width:max-content;animation:scrollX 32s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-item{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--serif);font-size:1.05rem;color:rgba(251,248,242,.85);font-style:italic}
+.marquee-item::before{content:"◆";color:var(--gold);font-size:.6rem;font-style:normal}
+@keyframes scrollX{to{transform:translateX(-50%)}}
+
+.stats{background:var(--marine);color:var(--cream)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center}
+.stat{padding:1rem}
+.stat .num{font-family:var(--serif);font-size:clamp(2.4rem,4vw,3.2rem);color:var(--gold);font-weight:600;line-height:1;letter-spacing:-.02em}
+.stat .lbl{margin-top:.6rem;font-size:.86rem;color:rgba(251,248,242,.72);font-weight:500}
+
+/* =========================================================
+   PROBLÈME
+   ========================================================= */
+.two-col{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.cost-list{display:grid;gap:1rem;margin-top:2rem}
+.cost-item{
+  display:flex;gap:1rem;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.15rem 1.3rem;box-shadow:var(--shadow-sm);transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+}
+.cost-item:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.cost-item .ic{width:44px;height:44px;border-radius:12px;flex:none;display:grid;place-items:center;background:rgba(201,162,39,.12);color:var(--gold)}
+.cost-item .ic svg{width:22px;height:22px}
+.cost-item h4{font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--marine);margin-bottom:.2rem}
+.cost-item p{font-size:.9rem;margin:0}
+.figure{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg)}
+.figure img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+.figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(15,32,56,.55))}
+.figure .cap{position:absolute;left:1.4rem;bottom:1.4rem;right:1.4rem;color:var(--cream);z-index:2}
+.figure .cap b{font-family:var(--serif);font-size:1.15rem;font-weight:500;display:block}
+.figure .cap span{font-size:.85rem;color:rgba(251,248,242,.85)}
+
+/* =========================================================
+   AVANT / APRÈS
+   ========================================================= */
+.beforeafter{background:linear-gradient(180deg,var(--cream) 0%,var(--cream-2) 100%)}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
+.ba-card{border-radius:var(--radius-lg);padding:2rem 2rem 2.2rem;position:relative;overflow:hidden}
+.ba-before{background:var(--white);border:1px solid var(--line)}
+.ba-after{background:var(--marine);color:var(--cream)}
+.ba-card .tag{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.2rem;display:inline-block}
+.ba-before .tag{color:var(--ink-soft)}
+.ba-after .tag{color:var(--gold)}
+.ba-card h3{margin-bottom:1.3rem}
+.ba-after h3{color:var(--cream)}
+.ba-list{display:grid;gap:.85rem}
+.ba-list li{display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;list-style:none}
+.ba-list svg{width:20px;height:20px;flex:none;margin-top:2px}
+.ba-before .ba-list{color:var(--ink-soft)}
+.ba-before .ba-list svg{color:#c25b4e}
+.ba-after .ba-list{color:rgba(251,248,242,.9)}
+.ba-after .ba-list svg{color:var(--gold-soft)}
+.ba-after::before{content:"";position:absolute;inset:auto -30% -40% auto;width:70%;height:70%;background:radial-gradient(circle,rgba(46,125,111,.4),transparent 70%)}
+
+/* =========================================================
+   BANDE HUMAINE
+   ========================================================= */
+.human{position:relative;color:var(--cream);background:var(--marine-950);overflow:hidden}
+.human-bg{position:absolute;inset:0;z-index:0}
+.human-bg img{width:100%;height:100%;object-fit:cover;opacity:.28}
+.human-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,var(--marine-950) 12%,rgba(15,32,56,.72) 60%,rgba(46,125,111,.35))}
+.human .wrap{position:relative;z-index:2}
+.human-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.human h2{color:var(--cream);margin-bottom:1.2rem}
+.human .lead{color:rgba(251,248,242,.82)}
+.avatars{display:flex;align-items:center;margin-top:2rem}
+.avatars img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:3px solid var(--marine-950);margin-left:-14px;box-shadow:var(--shadow-md)}
+.avatars img:first-child{margin-left:0}
+.avatars .more{margin-left:1rem;font-size:.9rem;color:rgba(251,248,242,.8)}
+
+/* =========================================================
+   COMPARATIF
+   ========================================================= */
+.compare-wrap{overflow-x:auto;margin-top:2.5rem;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);border:1px solid var(--line)}
+table.compare{width:100%;border-collapse:collapse;min-width:720px;background:var(--white)}
+table.compare th,table.compare td{padding:1.15rem 1.3rem;text-align:left;border-bottom:1px solid var(--line);font-size:.94rem}
+table.compare thead th{background:var(--cream-2);font-family:var(--sans);font-weight:600;color:var(--ink-soft);font-size:.82rem;letter-spacing:.05em;text-transform:uppercase}
+table.compare thead th.feat{background:var(--marine);color:var(--cream);position:relative}
+table.compare thead th.feat span{display:block;font-family:var(--serif);font-size:1.05rem;text-transform:none;letter-spacing:0;color:var(--gold);font-weight:500}
+table.compare tbody td:first-child{font-weight:600;color:var(--marine)}
+table.compare td.mbo{background:rgba(46,125,111,.06);font-weight:600;color:var(--marine)}
+table.compare tr:last-child td{border-bottom:none}
+.ck{display:inline-flex;width:22px;height:22px;border-radius:50%;align-items:center;justify-content:center}
+.ck.yes{background:rgba(46,125,111,.15);color:var(--teal)}
+.ck.no{background:rgba(194,91,78,.12);color:#c25b4e}
+.ck svg{width:13px;height:13px}
+
+/* =========================================================
+   MÉTHODE (4 étapes)
+   ========================================================= */
+.method{background:var(--marine);color:var(--cream);position:relative;overflow:hidden}
+.method::before{content:"";position:absolute;inset:-20% 40% auto -10%;width:60%;height:60%;background:radial-gradient(circle,rgba(46,125,111,.25),transparent 70%)}
+.method .eyebrow{color:var(--gold-soft)}
+.method h2{color:var(--cream)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:3.2rem;position:relative}
+.step{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);
+  padding:1.7rem 1.5rem;position:relative;transition:transform .4s var(--ease),background .4s;
+  backdrop-filter:blur(4px);
+}
+.step:hover{transform:translateY(-6px);background:rgba(255,255,255,.09)}
+.step .n{font-family:var(--serif);font-size:2.4rem;color:var(--gold);font-weight:600;line-height:1;opacity:.9}
+.step h4{font-family:var(--sans);font-size:1.05rem;font-weight:700;color:var(--cream);margin:.9rem 0 .5rem}
+.step p{font-size:.9rem;color:rgba(251,248,242,.75)}
+.step .dur{margin-top:1rem;display:inline-block;font-size:.74rem;font-weight:600;color:var(--gold-soft);background:rgba(201,162,39,.12);padding:.3rem .65rem;border-radius:999px}
+
+/* =========================================================
+   TARIFS
+   ========================================================= */
+.pricing .head{max-width:640px;margin-inline:auto}
+.plans{display:grid;grid-template-columns:.85fr 1.3fr .85fr;gap:1.4rem;margin-top:3.4rem;align-items:center}
+.plan{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius-lg);
+  padding:2rem 1.9rem 2.2rem;position:relative;transition:transform .4s var(--ease),box-shadow .4s var(--ease);
+  box-shadow:var(--shadow-sm);
+}
+.plan:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+.plan .plan-name{font-family:var(--serif);font-size:1.25rem;color:var(--marine);font-weight:600}
+.plan .plan-sub{font-size:.85rem;color:var(--ink-soft);margin-top:.25rem;min-height:2.4em}
+.plan .price{font-family:var(--serif);font-size:2.6rem;color:var(--marine);font-weight:600;margin:1.2rem 0 .3rem;letter-spacing:-.02em}
+.plan .price small{font-family:var(--sans);font-size:.9rem;font-weight:500;color:var(--ink-soft)}
+.plan ul{list-style:none;margin:1.4rem 0;display:grid;gap:.7rem}
+.plan ul li{display:flex;gap:.6rem;font-size:.9rem;color:var(--ink-soft);align-items:flex-start}
+.plan ul li svg{width:18px;height:18px;color:var(--teal);flex:none;margin-top:2px}
+.plan .btn{width:100%}
+/* Featured — Signature 490 */
+.plan.featured{
+  background:var(--marine);color:var(--cream);border:none;transform:scale(1.04);
+  box-shadow:var(--shadow-lg);z-index:2;padding-block:2.6rem;
+}
+.plan.featured:hover{transform:scale(1.04) translateY(-6px)}
+.plan.featured .plan-name,.plan.featured .price{color:var(--cream)}
+.plan.featured .price small,.plan.featured .plan-sub{color:rgba(251,248,242,.72)}
+.plan.featured ul li{color:rgba(251,248,242,.9)}
+.plan.featured ul li svg{color:var(--gold-soft)}
+.plan .ribbon{
+  position:absolute;top:-14px;left:50%;translate:-50% 0;
+  background:linear-gradient(120deg,var(--gold),var(--gold-soft));color:var(--marine-950);
+  font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:.4rem 1rem;border-radius:999px;box-shadow:var(--shadow-md);white-space:nowrap;
+}
+.pricing-note{text-align:center;margin-top:2.4rem;font-size:.9rem;color:var(--ink-soft)}
+
+/* =========================================================
+   POUR QUI / PAS POUR QUI
+   ========================================================= */
+.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
+.fit-card{border-radius:var(--radius-lg);padding:2rem 2rem 2.2rem;border:1px solid var(--line)}
+.fit-yes{background:var(--white)}
+.fit-no{background:var(--cream-2)}
+.fit-card h3{font-size:1.4rem;margin-bottom:1.4rem;display:flex;align-items:center;gap:.7rem}
+.fit-card h3 .badge{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex:none}
+.fit-yes .badge{background:rgba(46,125,111,.14);color:var(--teal)}
+.fit-no .badge{background:rgba(31,58,95,.1);color:var(--marine)}
+.fit-card ul{list-style:none;display:grid;gap:.9rem}
+.fit-card li{display:flex;gap:.7rem;font-size:.95rem;color:var(--ink-soft);align-items:flex-start}
+.fit-card li svg{width:19px;height:19px;flex:none;margin-top:2px}
+.fit-yes li svg{color:var(--teal)}
+.fit-no li svg{color:var(--marine);opacity:.5}
+
+/* =========================================================
+   BANDE « DANS L'OMBRE »
+   ========================================================= */
+.shadow-band{background:var(--marine-950);color:var(--cream);text-align:center}
+.shadow-band .quote{
+  font-family:var(--serif);font-size:clamp(1.5rem,3.4vw,2.5rem);font-weight:400;font-style:italic;
+  line-height:1.3;max-width:22ch;margin:0 auto;color:var(--cream);
+}
+.shadow-band .quote span{color:var(--gold-soft)}
+.shadow-band .sig{margin-top:1.6rem;font-family:var(--sans);font-size:.9rem;color:rgba(251,248,242,.6);font-style:normal}
+
+/* =========================================================
+   GARANTIE
+   ========================================================= */
+.guarantee-card{
+  background:linear-gradient(120deg,var(--white),var(--cream-2));
+  border:1px solid var(--line);border-radius:var(--radius-lg);
+  padding:clamp(2rem,4vw,3.4rem);display:grid;grid-template-columns:auto 1fr auto;
+  gap:2rem;align-items:center;box-shadow:var(--shadow-md);
+}
+.guarantee-seal{
+  width:96px;height:96px;border-radius:50%;flex:none;
+  background:radial-gradient(circle at 30% 30%,var(--gold-soft),var(--gold));
+  display:grid;place-items:center;color:var(--marine-950);box-shadow:0 20px 45px -18px rgba(201,162,39,.6);
+}
+.guarantee-seal svg{width:44px;height:44px}
+.guarantee-card h3{margin-bottom:.5rem}
+.guarantee-card p{font-size:.98rem;max-width:52ch}
+
+/* =========================================================
+   FONDATEUR
+   ========================================================= */
+.founder-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.founder-photo{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);max-width:380px}
+.founder-photo img{width:100%;aspect-ratio:1/1.15;object-fit:cover}
+.founder-quote{font-family:var(--serif);font-size:clamp(1.4rem,2.6vw,1.95rem);color:var(--marine);line-height:1.32;font-weight:400;margin-bottom:1.6rem}
+.founder-quote span{font-style:italic;color:var(--teal)}
+.founder-name{font-family:var(--serif);font-size:1.2rem;color:var(--marine);font-weight:600}
+.founder-role{font-size:.9rem;color:var(--ink-soft)}
+.founder-sign{margin-top:1.2rem;font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--gold);opacity:.9}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+.faq{max-width:820px;margin-inline:auto}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+  padding:1.4rem 0;font-family:var(--serif);font-size:1.15rem;font-weight:500;color:var(--marine);text-align:left;
+  transition:color .25s;
+}
+.faq-q:hover{color:var(--teal)}
+.faq-q .ic{
+  width:32px;height:32px;border-radius:50%;flex:none;display:grid;place-items:center;
+  background:var(--cream-2);color:var(--marine);transition:transform .35s var(--ease),background .3s;
+}
+.faq-q .ic svg{width:16px;height:16px}
+.faq-item[data-open="true"] .faq-q .ic{transform:rotate(45deg);background:var(--marine);color:var(--cream)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .45s var(--ease)}
+.faq-a p{padding:0 0 1.4rem;font-size:.96rem;max-width:64ch}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+.contact{background:var(--marine);color:var(--cream);position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:auto auto -30% -10%;width:50%;height:70%;background:radial-gradient(circle,rgba(46,125,111,.28),transparent 70%)}
+.contact .eyebrow{color:var(--gold-soft)}
+.contact h2{color:var(--cream)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(2rem,5vw,4rem);align-items:start;position:relative;z-index:2}
+.contact .lead{color:rgba(251,248,242,.82);margin-bottom:2rem}
+.contact-perks{display:grid;gap:1rem;margin-top:2rem}
+.contact-perks li{display:flex;gap:.8rem;font-size:.95rem;color:rgba(251,248,242,.88);list-style:none;align-items:flex-start}
+.contact-perks svg{width:20px;height:20px;color:var(--gold-soft);flex:none;margin-top:2px}
+.contact-alt{margin-top:2rem;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,.14);font-size:.9rem;color:rgba(251,248,242,.72)}
+.contact-alt a{color:var(--gold-soft);font-weight:600}
+.form{
+  background:var(--cream);border-radius:var(--radius-lg);padding:clamp(1.6rem,3vw,2.4rem);
+  box-shadow:var(--shadow-lg);
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.field{margin-bottom:1.1rem}
+.field label{display:block;font-size:.82rem;font-weight:600;color:var(--marine);margin-bottom:.4rem}
+.field label .req{color:var(--gold)}
+.field input,.field select,.field textarea{
+  width:100%;font-family:inherit;font-size:.95rem;color:var(--ink);
+  background:var(--white);border:1.5px solid var(--line);border-radius:12px;
+  padding:.8rem .95rem;transition:border-color .25s,box-shadow .25s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--teal);box-shadow:0 0 0 4px rgba(46,125,111,.12);
+}
+.field textarea{resize:vertical;min-height:120px}
+.form .btn{width:100%;margin-top:.4rem}
+.form-fine{font-size:.76rem;color:var(--ink-soft);margin-top:.9rem;text-align:center}
+.form-fine a{color:var(--teal);text-decoration:underline}
+
+/* =========================================================
+   LEGAL
+   ========================================================= */
+.legal{background:var(--cream-2)}
+.legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:2rem}
+.legal h3{font-size:1.2rem;margin-bottom:1rem}
+.legal p,.legal li{font-size:.85rem;color:var(--ink-soft);line-height:1.7}
+.legal ul{padding-left:1.1rem;display:grid;gap:.4rem}
+.legal .ph{background:rgba(201,162,39,.14);color:#8a6d10;padding:.05rem .4rem;border-radius:5px;font-weight:600;font-size:.82em}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer{background:var(--marine-950);color:rgba(251,248,242,.7);padding-block:3.5rem 2.5rem}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer .brand{color:var(--cream)}
+.footer .brand small{color:var(--gold-soft)}
+.footer p{color:rgba(251,248,242,.6);font-size:.9rem;margin-top:1rem;max-width:38ch}
+.footer h5{color:var(--cream);font-family:var(--sans);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.1rem;font-weight:600}
+.footer-col a{display:block;font-size:.92rem;color:rgba(251,248,242,.66);padding:.32rem 0;transition:color .25s}
+.footer-col a:hover{color:var(--gold-soft)}
+.footer-bottom{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;padding-top:2rem;font-size:.82rem;color:rgba(251,248,242,.5)}
+.footer-bottom .zones{display:flex;gap:.6rem;flex-wrap:wrap}
+.footer-bottom .zones span{background:rgba(255,255,255,.06);padding:.25rem .7rem;border-radius:999px;font-size:.76rem}
+
+/* =========================================================
+   REVEAL ANIMATIONS
+   ========================================================= */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}
+.reveal.d2{transition-delay:.16s}
+.reveal.d3{transition-delay:.24s}
+.reveal.d4{transition-delay:.32s}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:3.5rem}
+  .mockup{max-width:440px;margin-inline:auto}
+  .two-col,.human-grid,.founder-grid,.contact-grid{grid-template-columns:1fr;gap:2.5rem}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:2rem}
+  .steps{grid-template-columns:1fr 1fr}
+  .plans{grid-template-columns:1fr;max-width:440px;margin-inline:auto}
+  .plan.featured{transform:scale(1);order:-1}
+  .plan.featured:hover{transform:translateY(-6px)}
+  .ba-grid,.fit-grid,.legal-grid,.footer-top{grid-template-columns:1fr}
+  .guarantee-card{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .founder-photo{margin-inline:auto}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .nav-links{display:none}
+  .nav .btn.desktop-cta{display:none}
+  .burger{display:flex}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn{width:100%}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+  .mk-tag.t1{left:0}
+  .mk-tag.t2{right:0}
+}
+
+/* Mobile nav open */
+.mobile-menu{
+  position:fixed;inset:0;z-index:99;background:var(--cream);
+  display:flex;flex-direction:column;justify-content:center;gap:1.5rem;padding:2rem;
+  transform:translateX(100%);transition:transform .4s var(--ease);
+}
+.mobile-menu.open{transform:none}
+.mobile-menu a{font-family:var(--serif);font-size:1.6rem;color:var(--marine)}
+.mobile-menu .btn{margin-top:1rem}
+.mobile-close{position:absolute;top:1.6rem;right:1.6rem;font-size:2rem;color:var(--marine);line-height:1}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header" id="header">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Missions BackOffices — accueil">
+      <span class="mono" aria-hidden="true">M</span>
+      <span>Missions BackOffices<small>Le back-office de l'événementiel</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#methode">La méthode</a>
+      <a href="#comparatif">Comparatif</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#faq">Questions</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="btn btn-ghost desktop-cta" data-calendly>Découvrir la méthode</button>
+      <a href="#contact" class="btn btn-primary">Confier une demande</a>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu">
+  <button class="mobile-close" id="mobileClose" aria-label="Fermer le menu">&times;</button>
+  <a href="#methode">La méthode</a>
+  <a href="#comparatif">Comparatif</a>
+  <a href="#tarifs">Tarifs</a>
+  <a href="#faq">Questions</a>
+  <a href="#contact" class="btn btn-primary">Confier une demande</a>
+</div>
+
+<span id="top"></span>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <span class="hero-pill"><span class="dot" aria-hidden="true"></span> France · Belgique · Suisse romande · Luxembourg</span>
+      <h1>Vous avez le client. <em class="grad-text">Nous composons le dossier.</em></h1>
+      <p class="lead">Envoyez la demande de votre client&nbsp;— en 24&nbsp;à&nbsp;48&nbsp;h, vous recevez un dossier complet&nbsp;: concept, options prestataires, budget, marge, risques et le message à lui renvoyer.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-gold">Confier une demande
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <button class="btn btn-ghost" data-calendly>Découvrir la méthode</button>
+      </div>
+      <p class="hero-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Premier cadrage offert — envoyez une vraie demande, jugez sur pièce.
+      </p>
+    </div>
+
+    <!-- Aperçu produit : le Dossier -->
+    <div class="hero-visual reveal d2">
+      <div class="mockup">
+        <span class="mk-tag t1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2v20M2 12h20" stroke-linecap="round"/></svg> Prêt à envoyer</span>
+        <span class="mk-tag t2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg> Livré en 24/48h</span>
+        <span class="mk-accent a1" aria-hidden="true"></span>
+        <article class="mockup-card" aria-label="Aperçu d'un dossier">
+          <header class="mk-head">
+            <div class="mk-title">Le Dossier<span>Mariage · 120 invités · Provence</span></div>
+            <span class="mk-badge">Signature</span>
+          </header>
+          <div class="mk-row">
+            <span class="mk-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l2.4 6.9H22l-5.9 4.3 2.3 7L12 15.9 5.6 20.2l2.3-7L2 8.9h7.6z"/></svg></span>
+            <span class="mk-txt"><b>Concept & fil narratif</b><small>Une direction claire, prête à défendre</small></span>
+          </div>
+          <div class="mk-row">
+            <span class="mk-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h12"/></svg></span>
+            <span class="mk-txt"><b>Options prestataires</b><small>3 pistes qualifiées, disponibilités</small></span>
+            <span class="mk-val teal">3 scénarios</span>
+          </div>
+          <div class="mk-row">
+            <span class="mk-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+            <span class="mk-txt"><b>Budget & marge</b><small>Détaillé, transparent, ajustable</small></span>
+            <span class="mk-val">Marge 24%</span>
+          </div>
+          <div class="mk-row">
+            <span class="mk-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9L2 18a2 2 0 0 0 1.7 3h16.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span>
+            <span class="mk-txt"><b>Points de vigilance</b><small>Risques anticipés, alternatives</small></span>
+          </div>
+          <div class="mk-row">
+            <span class="mk-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v12H5.2L4 17.2z"/></svg></span>
+            <span class="mk-txt"><b>Message client</b><small>Rédigé, prêt à copier-coller</small></span>
+          </div>
+          <footer class="mk-foot">
+            <small>Reçu il y a 31 h</small>
+            <span class="chip">PDF · présentation client</span>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MARQUEE ===================== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Wedding planners</span>
+    <span class="marquee-item">Conciergeries de luxe</span>
+    <span class="marquee-item">Agences événementielles</span>
+    <span class="marquee-item">Concept & scénographie</span>
+    <span class="marquee-item">Options prestataires</span>
+    <span class="marquee-item">Budget & marge</span>
+    <span class="marquee-item">Message client</span>
+    <span class="marquee-item">Wedding planners</span>
+    <span class="marquee-item">Conciergeries de luxe</span>
+    <span class="marquee-item">Agences événementielles</span>
+    <span class="marquee-item">Concept & scénographie</span>
+    <span class="marquee-item">Options prestataires</span>
+    <span class="marquee-item">Budget & marge</span>
+    <span class="marquee-item">Message client</span>
+  </div>
+</div>
+
+<!-- ===================== STATS ===================== -->
+<section class="stats section" style="padding-block:clamp(48px,6vw,72px)">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat reveal"><div class="num" data-count="48" data-suffix="h">48h</div><div class="lbl">Délai de livraison maximum</div></div>
+      <div class="stat reveal d1"><div class="num" data-count="6" data-prefix="" data-suffix=" volets">6</div><div class="lbl">Volets dans chaque dossier</div></div>
+      <div class="stat reveal d2"><div class="num" data-count="0" data-suffix=" €">0 €</div><div class="lbl">Pour le premier cadrage</div></div>
+      <div class="stat reveal d3"><div class="num" data-count="100" data-suffix="%">100%</div><div class="lbl">En marque blanche, dans l'ombre</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROBLÈME ===================== -->
+<section class="section" id="probleme">
+  <div class="wrap two-col">
+    <div class="reveal">
+      <span class="eyebrow">Le vrai coût</span>
+      <h2>La prévente vous mange vos meilleures heures.</h2>
+      <p class="lead">Chaque demande sérieuse réclame des heures de recherche, de devis et de mise en forme&nbsp;— souvent le soir, souvent gratuitement, souvent avant même de savoir si le client signera.</p>
+      <div class="cost-list">
+        <div class="cost-item">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg></span>
+          <div><h4>Des soirées entières</h4><p>Recherche prestataires, chiffrage, mise en page&nbsp;: le temps qui ne facture pas.</p></div>
+        </div>
+        <div class="cost-item">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><h4>Une marge qui s'effrite</h4><p>À force de tout faire soi-même, le taux horaire réel fond sans qu'on le voie.</p></div>
+        </div>
+        <div class="cost-item">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0" stroke-linecap="round"/></svg></span>
+          <div><h4>Des demandes qui traînent</h4><p>Le client attend, la fenêtre se referme, l'élan retombe faute de réponse rapide.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="figure reveal d2">
+      <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=900&q=80" alt="Professionnelle de l'événementiel concentrée sur son ordinateur portable" loading="lazy" width="900" height="1125" />
+      <div class="cap"><b>Le temps de prévente est invisible.</b><span>Il ne se facture pas — mais il se paie.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AVANT / APRÈS ===================== -->
+<section class="section beforeafter">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Avant · Après</span>
+      <h2>Le même talent commercial.<br />Sans la charge de production.</h2>
+    </div>
+    <div class="ba-grid" style="text-align:left">
+      <div class="ba-card ba-before reveal">
+        <span class="tag">Avant</span>
+        <h3>Tout repose sur vous</h3>
+        <ul class="ba-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg> Des heures de recherche pour chaque demande.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg> Un chiffrage repris de zéro à chaque fois.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg> Des dossiers rendus tard, parfois bâclés.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg> Difficile de prendre plus de demandes.</li>
+        </ul>
+      </div>
+      <div class="ba-card ba-after reveal d2">
+        <span class="tag">Après</span>
+        <h3>Vous vendez, on produit</h3>
+        <ul class="ba-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Une demande envoyée, un dossier reçu sous 48&nbsp;h.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Concept, options, budget, marge&nbsp;: tout est là.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Une présentation prête à envoyer au client.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Vous répondez vite, vous prenez plus.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BANDE HUMAINE ===================== -->
+<section class="section human">
+  <div class="human-bg" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80" alt="" loading="lazy" data-parallax />
+  </div>
+  <div class="wrap human-grid">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--gold-soft)">Une équipe derrière la vôtre</span>
+      <h2>Comme un studio de production, à votre nom.</h2>
+      <p class="lead">Nous travaillons en coulisses, à votre rythme et à votre marque. Vous gardez la relation client, la signature et le mérite&nbsp;— nous portons la charge de production.</p>
+      <div class="avatars">
+        <img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=200&q=80" alt="Membre de l'équipe souriant" loading="lazy" width="56" height="56" />
+        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=200&q=80" alt="Équipe en collaboration" loading="lazy" width="56" height="56" />
+        <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=200&q=80" alt="Professionnelle au travail" loading="lazy" width="56" height="56" />
+        <span class="more">Une production discrète, à quatre mains avec vous.</span>
+      </div>
+    </div>
+    <div class="reveal d2">
+      <div class="figure">
+        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=900&q=80" alt="Deux professionnelles souriantes travaillant ensemble sur un projet" loading="lazy" width="900" height="1125" />
+        <div class="cap"><b>À vos côtés, jamais devant.</b><span>Le back-office qui vous fait gagner du temps.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMPARATIF ===================== -->
+<section class="section" id="comparatif">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Comparatif</span>
+      <h2>Pourquoi pas un·e assistant·e, un recrutement, ou le faire soi-même&nbsp;?</h2>
+      <p class="lead">Chaque option a un coût caché&nbsp;: le temps, la formation, l'engagement. Voici où se situe un dossier à la mission.</p>
+    </div>
+    <div class="compare-wrap reveal d2">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th>Critère</th>
+            <th class="feat"><span>Missions BackOffices</span>Dossier à la mission</th>
+            <th>Assistant·e / VA</th>
+            <th>Recrutement</th>
+            <th>Le faire soi-même</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dossier complet, prêt à présenter en 24/48&nbsp;h</td>
+            <td class="mbo"><span class="ck yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+            <td>Selon disponibilité</td>
+            <td>Après des semaines</td>
+            <td>Vos soirées</td>
+          </tr>
+          <tr>
+            <td>Expertise événementielle intégrée</td>
+            <td class="mbo"><span class="ck yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+            <td>À former</td>
+            <td>À recruter</td>
+            <td>La vôtre</td>
+          </tr>
+          <tr>
+            <td>Aucun engagement, à la demande</td>
+            <td class="mbo"><span class="ck yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+            <td>Souvent au forfait</td>
+            <td><span class="ck no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg></span></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Coût fixe mensuel</td>
+            <td class="mbo">Aucun</td>
+            <td>Variable</td>
+            <td>Salaire + charges</td>
+            <td>Votre temps</td>
+          </tr>
+          <tr>
+            <td>Marque blanche, à votre nom</td>
+            <td class="mbo"><span class="ck yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+            <td>Variable</td>
+            <td><span class="ck yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+            <td><span class="ck yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MÉTHODE ===================== -->
+<section class="section method" id="methode">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">La méthode</span>
+      <h2>Quatre étapes. Rien à gérer.</h2>
+      <p class="lead" style="color:rgba(251,248,242,.8)">Vous restez sur ce que vous faites de mieux&nbsp;: la relation client. Nous nous occupons du reste, en coulisses.</p>
+    </div>
+    <div class="steps" style="text-align:left">
+      <div class="step reveal">
+        <span class="n">01</span>
+        <h4>Vous transmettez</h4>
+        <p>La demande de votre client, telle quelle. Un message, un brief, quelques lignes suffisent.</p>
+        <span class="dur">5 minutes</span>
+      </div>
+      <div class="step reveal d1">
+        <span class="n">02</span>
+        <h4>On cadre</h4>
+        <p>On clarifie le besoin, le budget cible et l'intention. Au moindre doute, on vous pose la bonne question.</p>
+        <span class="dur">Le jour même</span>
+      </div>
+      <div class="step reveal d2">
+        <span class="n">03</span>
+        <h4>On produit</h4>
+        <p>Concept, options prestataires, budget, marge, risques et message client&nbsp;: tout le dossier.</p>
+        <span class="dur">24 à 48 h</span>
+      </div>
+      <div class="step reveal d3">
+        <span class="n">04</span>
+        <h4>Vous vendez</h4>
+        <p>Vous recevez un dossier prêt à envoyer. Vous l'ajustez, vous le présentez, vous signez.</p>
+        <span class="dur">À votre main</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TARIFS ===================== -->
+<section class="section pricing" id="tarifs">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow" style="justify-content:center">Tarifs à la mission</span>
+      <h2>Un tarif par dossier. Sans abonnement.</h2>
+      <p class="lead">Vous payez ce que vous commandez, quand vous en avez besoin. Commencez par le premier cadrage offert, puis choisissez le niveau qui sert votre client.</p>
+    </div>
+    <div class="plans">
+      <!-- Cadrage 90 -->
+      <div class="plan reveal">
+        <div class="plan-name">Cadrage</div>
+        <div class="plan-sub">Un avis structuré, vite, pour décider.</div>
+        <div class="price">90 €<small> / dossier</small></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Cadrage du besoin & faisabilité</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Fourchette de budget indicative</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Points de vigilance clés</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Idéal pour les demandes urgentes</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Choisir le cadrage</a>
+      </div>
+
+      <!-- Signature 490 (vedette) -->
+      <div class="plan featured reveal d1">
+        <span class="ribbon">★ Le plus choisi</span>
+        <div class="plan-name">Signature</div>
+        <div class="plan-sub">La présentation client, prête à envoyer.</div>
+        <div class="price">490 €<small> / dossier</small></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Dossier premium, mise en page soignée</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> 2 à 3 scénarios comparés</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Options prestataires élargies</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Traitement prioritaire</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Un ajustement inclus</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Présentation prête à envoyer au client</li>
+        </ul>
+        <a href="#contact" class="btn btn-gold">Confier une demande</a>
+      </div>
+
+      <!-- Recommandation 150 -->
+      <div class="plan reveal d2">
+        <div class="plan-name">Recommandation</div>
+        <div class="plan-sub">Le dossier complet, à l'essentiel.</div>
+        <div class="price">150 €<small> / dossier</small></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Concept & fil narratif</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Options prestataires</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Budget, marge & risques</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Message client rédigé</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Choisir la Recommandation</a>
+      </div>
+    </div>
+    <p class="pricing-note">Tarifs HT, par dossier livré. Le premier cadrage est offert&nbsp;— <a href="#contact" style="color:var(--teal);font-weight:600;text-decoration:underline">envoyez une vraie demande</a> pour juger sur pièce.</p>
+  </div>
+</section>
+
+<!-- ===================== POUR QUI / PAS POUR QUI ===================== -->
+<section class="section">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow" style="justify-content:center">Le bon accord</span>
+      <h2>Fait pour certaines maisons.<br />Pas pour toutes.</h2>
+    </div>
+    <div class="fit-grid" style="text-align:left">
+      <div class="fit-card fit-yes reveal">
+        <h3><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Pour vous si…</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Vous êtes wedding planner, conciergerie ou agence, seul·e ou en petite équipe.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Vous avez déjà des clients et des demandes à traiter.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Vous voulez répondre plus vite, sans sacrifier vos soirées.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Vous tenez à la qualité et à votre image de marque.</li>
+        </ul>
+      </div>
+      <div class="fit-card fit-no reveal d2">
+        <h3><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14" stroke-linecap="round"/></svg></span> Pas pour vous si…</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14" stroke-linecap="round"/></svg> Vous cherchez un prestataire à qui déléguer la relation client.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14" stroke-linecap="round"/></svg> Vous n'avez pas encore de clients à servir.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14" stroke-linecap="round"/></svg> Vous voulez le tarif le plus bas avant la qualité.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14" stroke-linecap="round"/></svg> Vous préférez tout garder en interne, coûte que coûte.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BANDE DANS L'OMBRE ===================== -->
+<section class="section shadow-band">
+  <div class="wrap reveal">
+    <p class="quote">Nous restons dans l'ombre pour que vous soyez <span>sous les projecteurs.</span></p>
+    <p class="sig">Marque blanche, confidentialité, discrétion — par principe.</p>
+  </div>
+</section>
+
+<!-- ===================== GARANTIE ===================== -->
+<section class="section" id="garantie">
+  <div class="wrap">
+    <div class="guarantee-card reveal">
+      <div class="guarantee-seal" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 15.3 7.2 17.7l.9-5.4L4.2 8.5l5.4-.8z" stroke-linejoin="round"/></svg>
+      </div>
+      <div>
+        <h3>Le premier cadrage est offert.</h3>
+        <p>Envoyez une vraie demande client. Vous recevez un cadrage offert&nbsp;— besoin clarifié, budget indicatif, points de vigilance. Vous jugez la qualité sur pièce, avant de commander quoi que ce soit. Sans engagement.</p>
+      </div>
+      <a href="#contact" class="btn btn-primary" style="white-space:nowrap">Envoyer une demande</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FONDATEUR ===================== -->
+<section class="section" id="fondateur">
+  <div class="wrap founder-grid">
+    <div class="founder-photo reveal">
+      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=760&q=80" alt="Portrait du fondateur de Missions BackOffices" loading="lazy" width="760" height="874" />
+    </div>
+    <div class="reveal d2">
+      <span class="eyebrow">Le fondateur</span>
+      <p class="founder-quote">« J'ai vu trop de professionnels talentueux <span>perdre leurs soirées</span> à produire des dossiers au lieu de vendre. Missions BackOffices existe pour renverser ça&nbsp;: vous gardez la relation et le mérite, nous portons la production. »</p>
+      <div class="founder-name">Jérémie Cuvelier</div>
+      <div class="founder-role">Fondateur — Missions BackOffices</div>
+      <div class="founder-sign" aria-hidden="true">Jérémie</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section beforeafter" id="faq">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow" style="justify-content:center">Questions fréquentes</span>
+      <h2>Ce qu'on nous demande souvent.</h2>
+    </div>
+    <div class="faq reveal d1">
+      <div class="faq-item" data-open="false">
+        <button class="faq-q" aria-expanded="false">Comment se passe une première demande&nbsp;?<span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a"><p>Vous nous transmettez la demande de votre client, telle que vous l'avez reçue. Nous réalisons un premier cadrage offert&nbsp;: besoin clarifié, budget indicatif, points de vigilance. Vous décidez ensuite si vous souhaitez un dossier complet.</p></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-q" aria-expanded="false">Que contient exactement un dossier&nbsp;?<span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a"><p>Un concept et un fil narratif, des options prestataires qualifiées, un budget détaillé avec la marge, les points de vigilance, et un message client prêt à envoyer. La version Signature ajoute une mise en page premium et 2 à 3 scénarios comparés.</p></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-q" aria-expanded="false">Est-ce que vous êtes en contact avec mes clients&nbsp;?<span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a"><p>Jamais. Nous travaillons en marque blanche, en coulisses. La relation client vous appartient entièrement&nbsp;— nous ne parlons qu'avec vous, et le dossier porte votre nom.</p></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-q" aria-expanded="false">Quels sont les délais&nbsp;?<span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a"><p>Un dossier complet est livré sous 24 à 48&nbsp;h après le cadrage. La version Signature bénéficie d'un traitement prioritaire. Pour une demande urgente, le cadrage donne une première lecture le jour même.</p></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-q" aria-expanded="false">Et si le dossier ne me convient pas&nbsp;?<span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a"><p>Le premier cadrage est offert, justement pour que vous jugiez notre travail sans risque. La version Signature inclut un ajustement, et nous restons à l'écoute pour que le dossier serve réellement votre vente.</p></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-q" aria-expanded="false">Dans quelles zones intervenez-vous&nbsp;?<span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a"><p>France, Belgique, Suisse romande et Luxembourg. Le travail se fait à distance, en français, quel que soit l'endroit où vous et vos clients vous trouvez.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="section contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Confier une demande</span>
+      <h2>Envoyez une demande. Recevez un cadrage offert.</h2>
+      <p class="lead">Décrivez la demande de votre client&nbsp;— même en quelques lignes. Nous revenons vers vous rapidement avec un premier cadrage, sans engagement.</p>
+      <ul class="contact-perks">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Premier cadrage offert, sans engagement.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Réponse sous 24&nbsp;h ouvrées.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Confidentiel et en marque blanche.</li>
+      </ul>
+      <div class="contact-alt">
+        Vous préférez en parler de vive voix&nbsp;?
+        <button class="btn btn-light" data-calendly style="margin-top:.8rem">Réserver un échange de 30&nbsp;min</button>
+        <p style="margin-top:1rem">Ou par e-mail&nbsp;: <a href="mailto:missionsbackoffices@missionsbackoffices.fr">missionsbackoffices@missionsbackoffices.fr</a></p>
+      </div>
+    </div>
+    <div class="reveal d2">
+      <form class="form" id="requestForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Nom <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Votre nom" />
+          </div>
+          <div class="field">
+            <label for="company">Structure</label>
+            <input type="text" id="company" name="company" autocomplete="organization" placeholder="Nom de votre maison" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="email">E-mail <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="vous@exemple.fr" />
+          </div>
+          <div class="field">
+            <label for="offer">Formule envisagée</label>
+            <select id="offer" name="offer">
+              <option>Premier cadrage offert</option>
+              <option>Cadrage — 90 €</option>
+              <option>Recommandation — 150 €</option>
+              <option>Signature — 490 €</option>
+              <option>Je ne sais pas encore</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">La demande de votre client <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" required placeholder="Type d'événement, nombre d'invités, lieu ou région, budget indicatif, échéance… Quelques lignes suffisent."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Envoyer ma demande
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p class="form-fine">En envoyant ce formulaire, vous acceptez d'être recontacté·e. Vos données ne servent qu'à traiter votre demande — voir <a href="#legal">mentions & RGPD</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LEGAL ===================== -->
+<section class="section legal" id="legal">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow" style="justify-content:center">Informations légales</span>
+      <h2>Mentions légales & RGPD</h2>
+    </div>
+    <div class="legal-grid reveal d1">
+      <div>
+        <h3>Mentions légales</h3>
+        <p><strong>Éditeur du site.</strong> <span class="ph">[RAISON SOCIALE]</span>, exploitant la marque « Missions BackOffices ». Siège social&nbsp;: <span class="ph">[adresse]</span>. SIREN&nbsp;: <span class="ph">[SIREN]</span>. Contact&nbsp;: missionsbackoffices@missionsbackoffices.fr.</p>
+        <p style="margin-top:1rem"><strong>Directeur de la publication.</strong> Jérémie Cuvelier.</p>
+        <p style="margin-top:1rem"><strong>Hébergeur.</strong> <span class="ph">[hébergeur]</span> — <span class="ph">[adresse hébergeur]</span>.</p>
+        <p style="margin-top:1rem"><strong>Propriété intellectuelle.</strong> L'ensemble des contenus de ce site (textes, visuels, marque) est protégé. Toute reproduction sans autorisation est interdite. Photographies d'illustration&nbsp;: Unsplash.</p>
+      </div>
+      <div>
+        <h3>Protection des données (RGPD)</h3>
+        <p><strong>Responsable de traitement.</strong> <span class="ph">[RAISON SOCIALE]</span>.</p>
+        <p style="margin-top:1rem"><strong>Données collectées.</strong> Via le formulaire&nbsp;: nom, structure, e-mail et le contenu de votre message. Elles servent uniquement à traiter votre demande et à vous recontacter.</p>
+        <p style="margin-top:1rem"><strong>Conservation.</strong> Les données sont conservées le temps nécessaire au traitement de la demande, puis archivées ou supprimées conformément à la réglementation.</p>
+        <p style="margin-top:1rem"><strong>Vos droits.</strong> Accès, rectification, effacement, opposition et portabilité&nbsp;: écrivez à missionsbackoffices@missionsbackoffices.fr. Aucun transfert commercial de vos données à des tiers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="brand">
+          <span class="mono" aria-hidden="true">M</span>
+          <span>Missions BackOffices<small>Le back-office de l'événementiel</small></span>
+        </div>
+        <p>Le studio de production discret des professionnels de l'événementiel. Vous confiez la demande, nous composons le dossier — vous gardez la relation, le mérite et la signature.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Explorer</h5>
+        <a href="#methode">La méthode</a>
+        <a href="#comparatif">Comparatif</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#faq">Questions</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="#contact">Confier une demande</a>
+        <button data-calendly style="color:rgba(251,248,242,.66);padding:.32rem 0;font-size:.92rem;text-align:left">Réserver un échange</button>
+        <a href="mailto:missionsbackoffices@missionsbackoffices.fr">Écrire un e-mail</a>
+        <a href="#legal">Mentions & RGPD</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Missions BackOffices — missionsbackoffices.fr</span>
+      <div class="zones">
+        <span>France</span><span>Belgique</span><span>Suisse romande</span><span>Luxembourg</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Calendly -->
+<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+<script>
+(function(){
+  "use strict";
+  var CALENDLY_URL = "https://calendly.com/jeremiecuvelier-pro/30min";
+
+  /* ---- Header condensé au scroll ---- */
+  var header = document.getElementById("header");
+  var onScroll = function(){
+    if(window.scrollY > 24){ header.classList.add("scrolled"); }
+    else{ header.classList.remove("scrolled"); }
+  };
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+
+  /* ---- Reveal au scroll ---- */
+  var revealEls = document.querySelectorAll(".reveal");
+  if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, {threshold:.12, rootMargin:"0px 0px -8% 0px"});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add("in"); });
+  }
+
+  /* ---- Compteurs animés ---- */
+  var counted = false;
+  var animateCounts = function(){
+    if(counted) return; counted = true;
+    document.querySelectorAll("[data-count]").forEach(function(el){
+      var target = parseFloat(el.getAttribute("data-count"));
+      var prefix = el.getAttribute("data-prefix") || "";
+      var suffix = el.getAttribute("data-suffix") || "";
+      var dur = 1400, start = null;
+      var step = function(ts){
+        if(!start) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = prefix + Math.round(target * eased) + suffix;
+        if(p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
+  };
+  var statsSection = document.querySelector(".stats");
+  if(statsSection && "IntersectionObserver" in window){
+    var statObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ animateCounts(); statObs.disconnect(); } });
+    }, {threshold:.4});
+    statObs.observe(statsSection);
+  } else { animateCounts(); }
+
+  /* ---- Parallaxe légère ---- */
+  var pEls = document.querySelectorAll("[data-parallax]");
+  if(pEls.length && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    window.addEventListener("scroll", function(){
+      var y = window.scrollY;
+      pEls.forEach(function(el){
+        var rect = el.getBoundingClientRect();
+        var offset = (rect.top + y);
+        el.style.transform = "translateY(" + ((y - offset) * 0.06) + "px) scale(1.08)";
+      });
+    }, {passive:true});
+  }
+
+  /* ---- Calendly popup ---- */
+  document.querySelectorAll("[data-calendly]").forEach(function(btn){
+    btn.addEventListener("click", function(e){
+      e.preventDefault();
+      if(window.Calendly){ window.Calendly.initPopupWidget({url: CALENDLY_URL}); }
+      else { window.open(CALENDLY_URL, "_blank", "noopener"); }
+    });
+  });
+
+  /* ---- FAQ accordéon ---- */
+  document.querySelectorAll(".faq-item").forEach(function(item){
+    var q = item.querySelector(".faq-q");
+    var a = item.querySelector(".faq-a");
+    q.addEventListener("click", function(){
+      var open = item.getAttribute("data-open") === "true";
+      item.setAttribute("data-open", open ? "false" : "true");
+      q.setAttribute("aria-expanded", open ? "false" : "true");
+      a.style.maxHeight = open ? "0px" : (a.scrollHeight + "px");
+    });
+  });
+
+  /* ---- Menu mobile ---- */
+  var burger = document.getElementById("burger");
+  var menu = document.getElementById("mobileMenu");
+  var closeBtn = document.getElementById("mobileClose");
+  var setMenu = function(open){
+    menu.classList.toggle("open", open);
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.style.overflow = open ? "hidden" : "";
+  };
+  burger.addEventListener("click", function(){ setMenu(true); });
+  closeBtn.addEventListener("click", function(){ setMenu(false); });
+  menu.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
+
+  /* ---- Formulaire → mailto ---- */
+  var form = document.getElementById("requestForm");
+  if(form){
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      var name = (form.name.value || "").trim();
+      var company = (form.company.value || "").trim();
+      var email = (form.email.value || "").trim();
+      var offer = form.offer.value;
+      var message = (form.message.value || "").trim();
+      var subject = "Nouvelle demande — " + (company || name);
+      var body =
+        "Nom : " + name + "\n" +
+        "Structure : " + company + "\n" +
+        "E-mail : " + email + "\n" +
+        "Formule : " + offer + "\n\n" +
+        "Demande client :\n" + message + "\n";
+      window.location.href = "mailto:missionsbackoffices@missionsbackoffices.fr" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+    });
+  }
+
+  /* ---- Année dynamique (évitée si JS off : 2026 en dur) ---- */
+  try { document.getElementById("year").textContent = new Date().getFullYear(); } catch(_){}
+})();
+</script>
+
+</body>
+</html>
