@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>L'École à la maison — Nihahsah & Nouria</title>
+<meta name="description" content="Deux programmes d'apprentissage sur mesure : les bases de la maternelle pour Nihahsah et le calcul mental CM2 pour Nouria." />
+<meta name="theme-color" content="#3a2d6d" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233a2d6d'/%3E%3Ctext x='32' y='46' font-size='38' text-anchor='middle'%3E%F0%9F%8E%92%3C/text%3E%3C/svg%3E" />
+<style>
+  :root{
+    --bg:#f4f1fb;
+    --card:#ffffff;
+    --ink:#2a2440;
+    --ink-soft:#6b6488;
+    --violet:#6d5ae0;
+    --violet-d:#4a3bb0;
+    --pink:#ff7eb6;
+    --mint:#37c99b;
+    --sun:#ffb020;
+    --shadow:0 22px 50px -24px rgba(58,45,109,.5);
+    --radius:26px;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    min-height:100dvh;
+    background:radial-gradient(120% 90% at 50% -10%,#efe9ff 0%,var(--bg) 55%);
+    color:var(--ink);
+    display:flex;flex-direction:column;align-items:center;
+    padding:clamp(20px,5vw,56px) 20px 48px;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .top{max-width:960px;width:100%;text-align:center;margin-bottom:clamp(24px,5vw,44px)}
+  .logo{font-size:clamp(44px,10vw,68px);line-height:1}
+  h1{font-size:clamp(26px,5.5vw,40px);margin:.35em 0 .2em;letter-spacing:-.02em}
+  .sub{color:var(--ink-soft);font-size:clamp(15px,3.4vw,19px);max-width:620px;margin:0 auto;line-height:1.5}
+  .cards{
+    display:grid;gap:clamp(18px,3.5vw,28px);
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    width:100%;max-width:960px;
+  }
+  .card{
+    position:relative;overflow:hidden;
+    background:var(--card);border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:clamp(26px,4vw,40px);
+    text-decoration:none;color:inherit;
+    display:flex;flex-direction:column;gap:14px;
+    border:2px solid transparent;
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .card:hover,.card:focus-visible{transform:translateY(-6px);border-color:rgba(109,90,224,.35);outline:none}
+  .card .blob{position:absolute;inset:auto -40px -60px auto;width:180px;height:180px;border-radius:50%;opacity:.16;filter:blur(4px)}
+  .card.nihah .blob{background:var(--pink)}
+  .card.nour .blob{background:var(--mint)}
+  .avatar{font-size:clamp(52px,9vw,72px);line-height:1}
+  .card h2{font-size:clamp(23px,4.4vw,30px);letter-spacing:-.01em}
+  .badge{
+    align-self:flex-start;font-size:14px;font-weight:700;
+    padding:6px 14px;border-radius:999px;color:#fff;
+  }
+  .nihah .badge{background:linear-gradient(120deg,var(--pink),#ff9a5b)}
+  .nour .badge{background:linear-gradient(120deg,var(--mint),#2aa5c9)}
+  .card p{color:var(--ink-soft);font-size:15.5px;line-height:1.55}
+  .go{
+    margin-top:6px;align-self:flex-start;font-weight:800;
+    display:inline-flex;align-items:center;gap:8px;
+    color:var(--violet-d);font-size:17px;
+  }
+  .nour .go{color:#1f8fa8}
+  .parent-link{
+    margin-top:clamp(26px,5vw,40px);
+    display:inline-flex;align-items:center;gap:9px;
+    background:#fff;border:1.5px solid rgba(58,45,109,.14);
+    padding:13px 22px;border-radius:999px;
+    text-decoration:none;color:var(--ink);font-weight:700;font-size:15px;
+    box-shadow:0 8px 24px -14px rgba(58,45,109,.4);
+    transition:transform .15s ease;
+  }
+  .parent-link:hover{transform:translateY(-2px)}
+  footer{margin-top:34px;color:var(--ink-soft);font-size:13px;text-align:center;line-height:1.6}
+</style>
+</head>
+<body>
+  <div class="top">
+    <div class="logo">🎒</div>
+    <h1>L'École à la maison</h1>
+    <p class="sub">Deux parcours faits sur mesure, pour apprendre à son rythme, en s'amusant et en confiance. Choisis ton étoile ✨</p>
+  </div>
+
+  <div class="cards">
+    <a class="card nihah" href="nihahsah/">
+      <span class="blob"></span>
+      <div class="avatar">🦋</div>
+      <span class="badge">Grande section · 5 ans</span>
+      <h2>Nihahsah</h2>
+      <p>Les lettres, les chiffres et compter — avec un petit rituel pour bien allumer son attention avant chaque jeu. Tout se joue en écoutant et en touchant de grands boutons.</p>
+      <span class="go">Commencer à jouer →</span>
+    </a>
+
+    <a class="card nour" href="nouria/">
+      <span class="blob"></span>
+      <div class="avatar">🚀</div>
+      <span class="badge">CM2 · 10 ans</span>
+      <h2>Nouria</h2>
+      <p>Le dojo du calcul mental : tables, compléments, astuces de calcul et défis chronométrés. Gagne des ceintures et bats tes records !</p>
+      <span class="go">Entrer dans le dojo →</span>
+    </a>
+  </div>
+
+  <a class="parent-link" href="parents.html">👋 Guide pour les parents — comment bien s'en servir</a>
+
+  <footer>
+    Fait avec ❤️ pour Nihahsah &amp; Nouria.<br />
+    La progression est enregistrée sur cet appareil (rien n'est envoyé sur internet).
+  </footer>
+</body>
+</html>
